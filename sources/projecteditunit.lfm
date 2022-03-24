@@ -1,0 +1,165 @@
+object ProjectEditDialog: TProjectEditDialog
+  Left = 986
+  Height = 380
+  Top = 363
+  Width = 345
+  ActiveControl = edtClient
+  BorderStyle = bsDialog
+  Caption = 'Edit Project'
+  ClientHeight = 380
+  ClientWidth = 345
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  LCLVersion = '1.6.4.0'
+  object grpBoxBackground: TGroupBox
+    Left = 8
+    Height = 336
+    Top = 0
+    Width = 329
+    ClientHeight = 318
+    ClientWidth = 325
+    TabOrder = 0
+    object edtClient: TEdit
+      Left = 96
+      Height = 21
+      Top = 8
+      Width = 216
+      TabOrder = 0
+    end
+    object edtPoNumber: TEdit
+      Left = 96
+      Height = 21
+      Top = 48
+      Width = 216
+      TabOrder = 1
+    end
+    object lblClient: TLabel
+      Left = 16
+      Height = 13
+      Top = 11
+      Width = 27
+      Caption = 'Client'
+      ParentColor = False
+    end
+    object lblPoNumber: TLabel
+      Left = 16
+      Height = 13
+      Top = 51
+      Width = 54
+      Caption = 'PO Number'
+      ParentColor = False
+    end
+    object lblType: TLabel
+      Left = 16
+      Height = 13
+      Top = 91
+      Width = 24
+      Caption = 'Type'
+      ParentColor = False
+    end
+    object cmbType: TComboBox
+      Left = 96
+      Height = 21
+      Top = 88
+      Width = 112
+      ItemHeight = 13
+      Style = csDropDownList
+      TabOrder = 2
+    end
+    object lblScope: TLabel
+      Left = 16
+      Height = 13
+      Top = 131
+      Width = 29
+      Caption = 'Scope'
+      ParentColor = False
+    end
+    object edtScope: TEdit
+      Left = 96
+      Height = 21
+      Top = 128
+      Width = 216
+      TabOrder = 3
+    end
+    object lblDeadline: TLabel
+      Left = 16
+      Height = 13
+      Top = 171
+      Width = 41
+      Caption = 'Deadline'
+      ParentColor = False
+    end
+    object dtpDeadline: TDateTimePicker
+      Left = 96
+      Height = 21
+      Top = 168
+      Width = 121
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      TabOrder = 4
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDateTime
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      Date = 42413
+      Time = 0.465847881947411
+      UseDefaultSeparators = True
+      HideDateTimeParts = [dtpSecond, dtpMiliSec]
+      MonthNames = 'Long'
+    end
+    object lblCompleted: TLabel
+      Left = 16
+      Height = 13
+      Top = 209
+      Width = 51
+      Caption = 'Completed'
+      ParentColor = False
+    end
+    object ckbCompleted: TCheckBox
+      Left = 96
+      Height = 17
+      Top = 208
+      Width = 18
+      TabOrder = 5
+    end
+    object lblComment: TLabel
+      Left = 16
+      Height = 13
+      Top = 248
+      Width = 45
+      Caption = 'Comment'
+      ParentColor = False
+    end
+    object mmoComment: TMemo
+      Left = 96
+      Height = 50
+      Top = 248
+      Width = 214
+      ScrollBars = ssAutoVertical
+      TabOrder = 6
+    end
+  end
+  object btnCancel: TButton
+    Left = 248
+    Height = 25
+    Top = 344
+    Width = 75
+    Caption = 'Cancel'
+    OnClick = btnCancelClick
+    TabOrder = 2
+  end
+  object btnOK: TButton
+    Left = 160
+    Height = 25
+    Top = 344
+    Width = 75
+    Caption = 'OK'
+    OnClick = btnOKClick
+    TabOrder = 1
+  end
+end

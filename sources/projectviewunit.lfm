@@ -1,0 +1,84 @@
+object ProjectViewForm: TProjectViewForm
+  Left = 512
+  Height = 471
+  Top = 346
+  Width = 1046
+  ActiveControl = vstProjectInfo
+  Caption = 'ProjectViewForm'
+  ClientHeight = 471
+  ClientWidth = 1046
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object vstProjectInfo: TVirtualStringTree
+    Left = 0
+    Height = 471
+    Top = 0
+    Width = 1046
+    Align = alClient
+    Colors.UnfocusedColor = clMedGray
+    DefaultText = 'Node'
+    Header.AutoSizeIndex = 0
+    Header.Columns = <    
+      item
+        Position = 0
+        Text = 'Client'
+        Width = 140
+      end    
+      item
+        Position = 1
+        Text = 'PO Number'
+        Width = 120
+      end    
+      item
+        Options = [coAllowClick, coDraggable, coEnabled, coParentBidiMode, coParentColor, coResizable, coShowDropMark, coVisible, coAllowFocus, coUseCaptionAlignment, coEditable]
+        Position = 2
+        Text = 'Type'
+        Width = 100
+      end    
+      item
+        Position = 3
+        Text = 'Scope'
+        Width = 140
+      end    
+      item
+        Position = 4
+        Text = 'Deadline'
+        Width = 180
+      end    
+      item
+        Alignment = taCenter
+        CaptionAlignment = taCenter
+        Options = [coAllowClick, coDraggable, coEnabled, coParentBidiMode, coParentColor, coResizable, coShowDropMark, coVisible, coAllowFocus, coUseCaptionAlignment, coEditable]
+        Position = 5
+        Text = 'Completed'
+        Width = 100
+      end    
+      item
+        Position = 6
+        Text = 'Comment'
+        Width = 260
+      end>
+    Header.Font.Style = [fsBold]
+    Header.Options = [hoColumnResize, hoDblClickResize, hoDrag, hoShowImages, hoVisible]
+    Header.SortColumn = 4
+    Images = MainForm.ImageList
+    TabOrder = 0
+    TreeOptions.SelectionOptions = [toFullRowSelect, toMultiSelect]
+    OnBeforeCellPaint = vstProjectInfoBeforeCellPaint
+    OnClick = vstProjectInfoClick
+    OnColumnDblClick = vstProjectInfoColumnDblClick
+    OnCompareNodes = vstProjectInfoCompareNodes
+    OnDrawText = vstProjectInfoDrawText
+    OnFreeNode = vstProjectInfoFreeNode
+    OnGetText = vstProjectInfoGetText
+    OnGetImageIndex = vstProjectInfoGetImageIndex
+    OnGetNodeDataSize = vstProjectInfoGetNodeDataSize
+    OnHeaderClick = vstProjectInfoHeaderClick
+    OnKeyPress = vstProjectInfoKeyPress
+  end
+  object DeadlineTimer: TTimer
+    OnTimer = DeadlineTimerTimer
+    left = 52
+    top = 396
+  end
+end
