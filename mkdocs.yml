@@ -3,7 +3,8 @@ site_description: User Manual for TheWhiteSheet, a project management tool speci
 repo_url: https://github.com/kruizer23/thewhitesheet
 edit_uri: edit/main/docs/
 nav:
-  - Getting started: 'index.md'
+  - Introduction: 'index.md'
+  - Getting started: 'getting_started.md'
 theme:
   name: material
   icon:
