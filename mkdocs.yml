@@ -1,0 +1,37 @@
+site_name: TheWhiteSheet User Manual
+site_description: User Manual for TheWhiteSheet, a project management tool specifically developed for professional translators.
+repo_url: https://github.com/kruizer23/thewhitesheet
+edit_uri: edit/main/docs/
+nav:
+  - Getting started: 'index.md'
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - toc.integrate
+    - navigation.top
+  palette: 
+    - scheme: default
+      primary: blue
+      accent: red
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+    - scheme: slate 
+      primary: blue
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+plugins:
+  - search
+extra:
+  generator: false
+copyright: Copyright &copy; 2022 by Frank Voorburg
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
