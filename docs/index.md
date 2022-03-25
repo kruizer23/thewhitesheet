@@ -23,7 +23,7 @@ With the help of **TheWhiteSheet**, you'll stay on top of your project load and 
 
 ## Installation
 
-You can download a Windows 7/8/10/11 installer from the [Releases page](https://github.com/kruizer23/thewhitesheet/releases). Run the installer by double-clicking the downloaded `.exe` file. Afterwards, you can find a shortcut to **TheWhiteSheet** in your start menu to open the application.
+You can download a Windows 7/8/10/11 installer from the [releases page](https://github.com/kruizer23/thewhitesheet/releases). Run the installer by double-clicking the downloaded `.exe` file. Afterwards, you can find a shortcut to **TheWhiteSheet** in your start menu to open the application.
 
 For additional information on using TheWhiteSheet, either play around and experiment with it or continue reading in the [getting started](getting_started.md) section.
 
