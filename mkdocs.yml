@@ -5,6 +5,7 @@ edit_uri: edit/main/docs/
 nav:
   - Introduction: 'index.md'
   - Getting started: 'getting_started.md'
+  - Contributing: 'contributing.md'
 theme:
   name: material
   icon:
@@ -16,15 +17,6 @@ theme:
     - scheme: default
       primary: blue
       accent: red
-      toggle:
-        icon: material/toggle-switch-off-outline 
-        name: Switch to dark mode
-    - scheme: slate 
-      primary: blue
-      accent: red
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
 plugins:
   - search
 extra:
