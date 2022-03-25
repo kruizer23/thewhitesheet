@@ -75,6 +75,18 @@ When it's invoicing time, typically once a month or so, you can switch to the vi
 
 ## Export the project list
 
+With the export feature you can save the projects, shown in the current view, to a CSV file. CSV stands for Comma-Separated Values. Such CSV files are easily imported by spreadsheet programs like Microsoft Excel and LibreOffice Calc. 
+
+Chances are that you already use a spreadsheet for in some shape or form for the financial administration of your freelance business. This makes the export feature especially handy, because it enables you to easily import all project details from **TheWhiteSheet** into your spreadsheet.
+
+As an example, the following screenshot illustrates how to export the list of completed project to a file called `completed_projects.csv`:
+
+![](images/export_projects.png)
+
+Once exported, you can import it into for example LibreOffice Calc:
+
+![](images/spreadsheet_import.png) 
+
 
 
 ## Delete a project
