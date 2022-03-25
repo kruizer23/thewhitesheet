@@ -79,18 +79,22 @@ With the export feature you can save the projects, shown in the current view, to
 
 Chances are that you already use a spreadsheet for in some shape or form for the financial administration of your freelance business. This makes the export feature especially handy, because it enables you to easily import all project details from **TheWhiteSheet** into your spreadsheet.
 
-As an example, the following screenshot illustrates how to export the list of completed project to a file called `completed_projects.csv`:
+To export the project list, select File&rarr; Export for the program menu, press <kbd>CTRL</kbd>+<kbd>e</kbd> or click the associated toolbar button. As an example, the following screenshot illustrates how to export the list of completed projects to a file called `completed_projects.csv`:
 
 ![](images/export_projects.png)
 
-Once exported, you can import it into for example LibreOffice Calc:
+Once exported, you can import the CSV file into your spreadsheet application:
 
 ![](images/spreadsheet_import.png) 
 
-
-
 ## Delete a project
 
-
+Once you completed and fully processed a project, it's time to remove it from the project list. To delete a project, click on it in the project list to select it. Next, select *Project* &rarr;  *Delete* from the program menu, press <kbd>Delete</kbd> on the keyboard or click the associated toolbar button. A dialog appears when you can confirm that you want to delete the project.
 
 ## User settings
+
+When you start and exit **TheWhiteSheet**, it automatically opens and saves your project list, respectively. These user settings are stored in a file called `TheWhiteSheet.cfg`, located in directory:
+
+* `C:\Users\<user name>\AppData\Local\TheWhiteSheet\`
+
+It's recommended to include this file, each time you backup the personal files on your PC. If you're not yet backing up your pesonal files, consider installing a tool such as [Veeam Agent](https://www.veeam.com/windows-endpoint-server-backup-free.html). It's free and you can configure it to automatically run backups for you in the background.
