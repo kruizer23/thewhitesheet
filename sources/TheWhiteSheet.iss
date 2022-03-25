@@ -28,6 +28,8 @@ OutputDir=.
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+ArchitecturesInstallIn64BitMode=x64 ia64 arm64
+ArchitecturesAllowed=x64 ia64 arm64
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
