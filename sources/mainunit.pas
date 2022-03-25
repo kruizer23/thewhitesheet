@@ -38,7 +38,7 @@ interface
 uses
   Classes, SysUtils, LazFileUtils, UniqueInstance, Forms, Controls, Graphics,
   Dialogs, ComCtrls, DateUtils, ActnList, Menus, ExtCtrls, projectviewunit,
-  projecteditunit, projectdata, XMLConf, aboutunit;
+  projecteditunit, projectdata, XMLConf, LCLIntf, aboutunit;
 
 //***************************************************************************************
 // Type Definitions
@@ -52,6 +52,7 @@ type
     ActFileExit: TAction;
     ActHelpAbout: TAction;
     ActFileExport: TAction;
+    ActHelpManual: TAction;
     ActProjectPaste: TAction;
     ActProjectCopy: TAction;
     ActViewCompleted: TAction;
@@ -63,6 +64,8 @@ type
     ActionList: TActionList;
     ImageList: TImageList;
     MainMenu: TMainMenu;
+    MenuItem1: TMenuItem;
+    MenuItem2: TMenuItem;
     MnuItemExport: TMenuItem;
     MnuItemSep2: TMenuItem;
     MnuItemPaste: TMenuItem;
@@ -101,6 +104,7 @@ type
     procedure ActFileExitExecute(Sender: TObject);
     procedure ActFileExportExecute(Sender: TObject);
     procedure ActHelpAboutExecute(Sender: TObject);
+    procedure ActHelpManualExecute(Sender: TObject);
     procedure ActProjectAddExecute(Sender: TObject);
     procedure ActProjectCopyExecute(Sender: TObject);
     procedure ActProjectDeleteExecute(Sender: TObject);
@@ -293,6 +297,21 @@ begin
   // release the dialog
   AboutDialog.Free;
 end; //*** end of ActHelpAboutExecute ***
+
+
+//***************************************************************************************
+// NAME:           ActHelpManualExecute
+// PARAMETER:      Sender Signal source.
+// RETURN VALUE:   None.
+// DESCRIPTION:    Open the web browser and visit the online user manual.
+//
+//***************************************************************************************
+procedure TMainForm.ActHelpManualExecute(Sender: TObject);
+begin
+  // Open the browser and visit the online user manual.
+  OpenURL('https://kruizer23.github.io/thewhitesheet/');
+end; //*** end of ActHelpManualExecute ***
+
 
 //***************************************************************************************
 // NAME:           ActProjectAddExecute

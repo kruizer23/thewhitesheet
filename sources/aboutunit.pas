@@ -85,7 +85,7 @@ implementation
 procedure TAboutDialog.InitializeGui;
 begin
   // set the version label
-  lblVersion.Caption := 'TheWhiteSheet v1.00';
+  lblVersion.Caption := 'TheWhiteSheet v1.0.0';
   // set the copyright info
   lblCopyright.Caption := 'Copyright ' + '©' + ' 2022 by Frank Voorburg';
   // set the website
