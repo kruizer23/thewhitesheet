@@ -127,6 +127,7 @@ type
   private
     { private declarations }
     FUserDataFile: string;
+    FExportDir: string;
     FClipboardProject: TProjectData;
     FClipboardEmpty: Boolean;
     ProjectView: TProjectViewForm;
@@ -267,11 +268,23 @@ begin
   if ProjectView.Count <= 0 then
     Exit;
 
+  // set initial directory to the one that was last used.
+  if FExportDir <> '' then
+  begin
+    // make sure the directory exists
+    if DirectoryExists(FExportDir) then
+    begin
+      SaveDialog.InitialDir := FExportDir;
+    end;
+  end;
+
   // prompt user to select the configuration file to write to
   if saveDialog.Execute then
   begin
     // perform the exporting
     ProjectView.ExportToCsv(SaveDialog.FileName, FUserDataFile);
+    // store the export directory so it can be used as the initial one next time.
+    FExportDir := ExtractFilePath(SaveDialog.FileName);
     // inform user of result
     MessageDlg('Export successfully completed.', mtInformation, [mbOK], 0);
   end;
@@ -652,6 +665,10 @@ begin
     xmlConfig.SetValue('Dimensions/Top', Self.Top);
   end;
   xmlConfig.CloseKey; // MainWindow
+  // ***** export *****
+  xmlConfig.OpenKey('Export');
+  xmlConfig.SetValue('LastDir', WideString(FExportDir));
+  xmlConfig.CloseKey; // Export
   xmlConfig.CloseKey; // Configuration
   // --------------- user data  ---------------------------------------------------------
   xmlConfig.OpenKey('Data');
@@ -730,6 +747,12 @@ begin
   Self.Left := xmlConfig.GetValue('Dimensions/Left', 100);
   Self.Top := xmlConfig.GetValue('Dimensions/Top', 100);
   xmlConfig.CloseKey; // MainWindow
+  // ***** export *****
+  xmlConfig.OpenKey('Export');
+  FExportDir := string(xmlConfig.GetValue('LastDir', ''));
+  if not DirectoryExists(FExportDir) then
+     FExportDir := '';
+  xmlConfig.CloseKey; // Export
   xmlConfig.CloseKey; // Configuration
   // --------------- project data  ------------------------------------------------------
   xmlConfig.OpenKey('Data');
