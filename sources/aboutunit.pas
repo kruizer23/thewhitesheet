@@ -38,7 +38,7 @@ interface
 //***************************************************************************************
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, LCLIntf;
+  ExtCtrls, LCLIntf, appversion;
 
 //***************************************************************************************
 // Type definitions
@@ -83,11 +83,20 @@ implementation
 //
 //***************************************************************************************
 procedure TAboutDialog.InitializeGui;
+var
+  appVersion: TAppVersion;
+  appVersionStr: string;
 begin
+  // Create the application version information object and add the version info to the
+  // form's caption.
+  appVersion := TAppVersion.Create;
+  appVersionStr := 'v' + appVersion.Text;
+  FreeAndNil(appVersion);
+
   // set the version label
-  lblVersion.Caption := 'TheWhiteSheet v1.0.0';
+  lblVersion.Caption := 'TheWhiteSheet ' + appVersionStr;
   // set the copyright info
-  lblCopyright.Caption := 'Copyright ' + '©' + ' 2022 by Frank Voorburg';
+  lblCopyright.Caption := 'Copyright ' + #$c2#$a9 + ' 2022 by Frank Voorburg';
   // set the website
   lblWebsite.Caption := 'View on GitHub';
 end; //*** end of InitializeGui ***
