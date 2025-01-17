@@ -36,7 +36,7 @@ interface
 // Global includes
 //***************************************************************************************
 uses
-  Classes, SysUtils, FileUtil, VirtualTrees, Forms, Controls, Graphics, Dialogs,
+  Classes, SysUtils, FileUtil, laz.VirtualTrees, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, projectdata, DateUtils, XMLConf;
 
 //***************************************************************************************
@@ -68,7 +68,7 @@ type
 
   TProjectViewForm = class(TForm)
     DeadlineTimer: TTimer;
-    vstProjectInfo: TVirtualStringTree;
+    vstProjectInfo: TLazVirtualStringTree;
     procedure DeadlineTimerTimer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure vstProjectInfoBeforeCellPaint(Sender: TBaseVirtualTree;

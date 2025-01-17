@@ -39,7 +39,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, virtualtreeview_package, uniqueinstance_package, datetimectrls, mainunit
+  Forms, laz.virtualtreeview_package, uniqueinstance_package, datetimectrls, mainunit
   { you can add units after this };
 
 {$R *.res}

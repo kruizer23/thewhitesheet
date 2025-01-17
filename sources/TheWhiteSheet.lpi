@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <PathDelim Value="\"/>
     <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <MainUnit Value="0"/>
       <Title Value="TheWhiteSheet"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -47,6 +49,7 @@
           <Linking>
             <Debugging>
               <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
             </Debugging>
             <LinkSmart Value="True"/>
             <Options>
@@ -80,7 +83,7 @@
         <PackageName Value="uniqueinstance_package"/>
       </Item2>
       <Item3>
-        <PackageName Value="virtualtreeview_package"/>
+        <PackageName Value="laz.virtualtreeview_package"/>
       </Item3>
       <Item4>
         <PackageName Value="LCL"/>
@@ -101,7 +104,9 @@
       <Unit2>
         <Filename Value="projectviewunit.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="ProjectViewForm"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit2>
       <Unit3>
         <Filename Value="projecteditunit.pas"/>

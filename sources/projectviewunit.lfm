@@ -9,7 +9,7 @@ object ProjectViewForm: TProjectViewForm
   ClientWidth = 1046
   OnCreate = FormCreate
   LCLVersion = '1.6.4.0'
-  object vstProjectInfo: TVirtualStringTree
+  object vstProjectInfo: TLazVirtualStringTree
     Left = 0
     Height = 471
     Top = 0
